@@ -114,3 +114,10 @@ function getRandomIntInclusive(min, max) {
 console.log(hasElemMathRandom());
 
 // 5. Дан массив arr. Найдите среднее арифметическое его элементов. Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
+
+function arithmeticalMean(array) {
+  return array.reduce((element, element1) => element + element1) / array.length;
+}
+
+const arr = [12, 15, 20, 25, 59, 79];
+console.log(arithmeticalMean(arr));
