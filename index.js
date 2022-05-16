@@ -66,10 +66,51 @@ console.log(arraySort.sort());
 
 // 1.Необходимо создать функцию hasElem, которая параметрами будет    принимать массив и строку,и возвращать true, если строка есть в массиве, и false - если нет.
 
+function hasElem(array, element) {
+  return array.includes(element);
+}
+
+const arrayFull = [1, 3, "nice js"];
+const variable = "good luck!";
+console.log(hasElem(arrayFull, variable));
+
 // 2. Дан массив с числами. Проверьте, что в этом массиве есть указанное число. Если есть - вернуть true, а если нет - вернуть false.
+
+function hasElemRevision(array, element) {
+  return array.includes(element);
+}
+
+const arrayNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const number = 5;
+console.log(hasElemRevision(arrayNumber, number));
 
 // 3. Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. Если есть -  вернуть true[2,2,1], а если нет - вернуть false[1,2,1].
 
+function hasElemCheck(array) {
+  const iterator = array.keys();
+  for (const key of iterator) {
+    if (array[key] === array[key + 1]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+const arrayExample = [2, 2, 1];
+console.log(hasElemCheck(arrayExample));
+
 // 4. Функция, которая возвращает массив заполненный 10 случайными числами в интервале от 5 до 33. Math.random().
+
+function hasElemMathRandom() {
+  return Array.from({ length: 10 }, () => getRandomIntInclusive(5, 33));
+}
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(hasElemMathRandom());
 
 // 5. Дан массив arr. Найдите среднее арифметическое его элементов. Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
