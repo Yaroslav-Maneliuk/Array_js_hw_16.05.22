@@ -67,6 +67,9 @@ console.log(arraySort.sort());
 // 1.Необходимо создать функцию hasElem, которая параметрами будет    принимать массив и строку,и возвращать true, если строка есть в массиве, и false - если нет.
 
 function hasElem(array, element) {
+  if (array.length === 0) {
+    return "Empty array. Fill in the data. ";
+  }
   return array.includes(element);
 }
 
@@ -77,6 +80,9 @@ console.log(hasElem(arrayFull, variable));
 // 2. Дан массив с числами. Проверьте, что в этом массиве есть указанное число. Если есть - вернуть true, а если нет - вернуть false.
 
 function hasElemRevision(array, element) {
+  if (array.length === 0) {
+    return "Empty array. Fill in the data.";
+  }
   return array.includes(element);
 }
 
@@ -88,6 +94,9 @@ console.log(hasElemRevision(arrayNumber, number));
 
 function hasElemCheck(array) {
   const iterator = array.keys();
+  if (array.length === 0) {
+    return "Empty array. Fill in the data.";
+  }
   for (const key of iterator) {
     if (array[key] === array[key + 1]) {
       return true;
@@ -116,6 +125,9 @@ console.log(hasElemMathRandom());
 // 5. Дан массив arr. Найдите среднее арифметическое его элементов. Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
 
 function arithmeticalMean(array) {
+  if (array.length === 0) {
+    return "Empty array. Fill in the data.";
+  }
   return array.reduce((element, element1) => element + element1) / array.length;
 }
 
